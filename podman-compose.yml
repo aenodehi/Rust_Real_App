@@ -1,0 +1,22 @@
+services:
+  vscode:
+    image: vscode-slim-image 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Rust_problems
+    ports:
+      - "4000:3000"  
+      - "8000:8000"  
+    volumes:
+      - .:/home/workspace:Z
+    environment:
+     # - PASSWORD=1  
+    networks:
+      - my_network 
+    restart: always
+
+networks:
+  my_network:
+    driver: bridge  
+
