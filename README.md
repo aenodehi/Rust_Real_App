@@ -25,22 +25,29 @@ This container has some real life problems with Data Structure Solutions
 sudo apt-get install podman podman-docker podman-compose
 podman-compose build
 podman-compose up -d
+```
 
 ## Quick Start
 
 ### 1. Clone the repository
+```bash
 git clone https://github.com/yourusername/rust-dev-container.git
 cd rust-dev-container
+```
 
 ### 2. Build and start the container
+```bash
 podman-compose up -d --build
+```
 
 ### 3. Access the development environment
 http://localhost:4000
 
 ## Development Workflow
+```bash
 cargo new my_project
 cd my_project
 cargo run
 cargo test
 podman exec -it Rust_problems /bin/bash
+```
